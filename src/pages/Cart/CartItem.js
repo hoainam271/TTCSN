@@ -38,17 +38,11 @@ function CartItem(props) {
                 <button onClick={handleDelete}>Xoa</button>
             </div> */}
             <section id="cart_items">
-                <div className="container">
-                    {/* <div className="breadcrumbs">
-                        <ol className="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li className="active">Cart</li>
-                        </ol>
-                    </div> */}
-                    <div className="table-responsive cart_info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                <div className="container" >
+                    <div className="table-responsive cart_info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                         <table className="table table-condensed" >
                             <thead>
-                                <tr className="cart_menu">
+                                <tr className="cart_menu" >
                                     <td className="image">Sản phẩm</td>
                                     <td className="description" />
                                     <td className="price">Giá</td>
@@ -69,6 +63,7 @@ function CartItem(props) {
                                         <td className="cart_price">
                                             {item.info.price}$
                                         </td>
+                                        
                                         <td className="cart_quantity">
                                             <div className="cart_quantity_button">
                                                 <a className="cart_quantity_up" href> <button onClick={handleUp}>+</button> </a>
@@ -90,7 +85,7 @@ function CartItem(props) {
                     </div>
                 </div>
             </section>
-
+            
         </>
     )
 }

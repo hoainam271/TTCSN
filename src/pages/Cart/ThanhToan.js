@@ -1,52 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import CartList from "./CartList";
-import "./Cart.scss"
-import { deleteItemAll } from "../../actions/cart";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { deleteItemAll } from "../../actions/cart";
 
-function Cart() {
-
-    const cart = useSelector(state => state.cartReducer)
-    console.log(cart);
-    
-    // const total = cart.reduce((sum,item) => {
-    //     const priceNew=(item.info.price - item.info.price * item.info.discountPercentage / 100).toFixed(0)
-    //     return sum+priceNew*item.quantity
-    // },0)
-    const total = cart.reduce((sum,item) => {
-        const priceNew=(item.info.price-0).toFixed(2)
-        return sum+priceNew*item.quantity
-    },0)
-    // const total = cart.reduce((sum, item) => {
-    //     const priceNew = item.info.price
-    //     return (sum + priceNew * item.quantity).toFixed(2);
-    // }, 0)
+export function ThanhToan(props) {
+    const { item } = props;
+    const navigate = useNavigate();
     const dispatch = useDispatch();
-    const handleDeleteAll = () => {
-        dispatch(deleteItemAll())
-    }
-        const navigate = useNavigate();
-        
-        const handleClick = (e) => {
-            // e.preventDefault(); // Ngăn form reload
-            alert("Đã đặt hàng thành công");
-            dispatch(deleteItemAll());
-            window.scrollTo(0, 0); // Cuộn lên đầu trang
-            navigate("/");
-           
-        };
+    
+    const handleClick = (e) => {
+        // e.preventDefault(); // Ngăn form reload
+        alert("Đã đặt hàng thành công");
+        dispatch(deleteItemAll());
+        window.scrollTo(0, 0); // Cuộn lên đầu trang
+        navigate("/");
+       
+    };
+
+
     return (
         <>
-            {/* <h2>Gio hang</h2> */}
-            <button onClick={handleDeleteAll}>Xóa tất cả</button>
             <div>
-                {cart.length > 0 ? (
-                    <>
-                        <CartList />
-                        <div className="cart__total">
-                            Tổng chi phí:<span>{total}$</span>
-                        </div>
-                        <div>
                 <div class="container">
                     <div class="register-req">
                         <p>Vui lòng sử dụng Đăng ký và Thanh toán để dễ dàng truy cập vào lịch sử đơn hàng của bạn hoặc sử dụng Thanh toán với tư cách là Khách</p>
@@ -98,15 +71,8 @@ function Cart() {
                     </div>
                 </div>
             </div>
-                    </>
-                ) :
-                    (
-                        <div>Giỏ hàng trống</div>
-                    )}
-            </div>
-
         </>
     )
 }
-export default Cart;
 
+export default ThanhToan;

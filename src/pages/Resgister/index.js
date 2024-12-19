@@ -81,11 +81,11 @@ function Register() {
                             <div className="signup-form">{/*sign up form*/}
                                 <h2>Đăng ký tài khoản</h2>
                                 <form action="#">
-                                    <input type="text" placeholder="Nhập họ và tên" />
-                                    <input type="text" placeholder="Thành phố đang sống" />
-                                    <input type="date" onChange={handleDateChange} placeholder="Nhập ngày tháng năm sinh" />
-                                    <input type="number" placeholder="Nhập số điện thoại" />
-                                    <input type="password" placeholder="Nhập mật khẩu" />
+                                    <input type="text" placeholder="Nhập họ và tên" required/>
+                                    <input type="text" placeholder="Thành phố đang sống" required />
+                                    <input type="date" onChange={handleDateChange} placeholder="Nhập ngày tháng năm sinh" required />
+                                    <input type="number" placeholder="Nhập số điện thoại" required/>
+                                    <input type="password" placeholder="Nhập mật khẩu" required/>
                                     <button type="submit" className="btn btn-default">Đăng ký</button>
                                 </form>
                             </div>{/*/sign up form*/}
