@@ -23,6 +23,7 @@ function ProductItem(props) {
     const navigate = useNavigate();
         const handleDetail = () => {
             navigate(`/products/${item.id}`); // Chuyển sang trang chi tiết với ID
+            window.scrollTo(0, 0); // Cuộn lên đầu trang
         };
     return (
         <>
@@ -32,8 +33,11 @@ function ProductItem(props) {
                 <h3 className="product__title" style={{cursor:"pointer"}} onClick={handleDetail}>{item.name}</h3>
                 <div className="product__price">Giá: {item.price}$</div>
                 <div className="product__button">
-                    <button onClick={handleAddToCard}><i className="fa fa-shopping-cart" /> Thêm vào giỏ hàng</button>
-                </div>
+                <button style={{
+                    }} onClick={handleAddToCard} type="button" class="btn btn-fefault cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        Thêm vào giỏ hàng
+                    </button>                </div>
 
             </div>
             )}

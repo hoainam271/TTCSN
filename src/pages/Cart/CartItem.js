@@ -37,7 +37,7 @@ function CartItem(props) {
                 </div>
                 <button onClick={handleDelete}>Xoa</button>
             </div> */}
-            <section id="cart_items">
+            <section id="cart_items" style={{backgroundColor:"white"}}>
                 <div className="container" >
                     <div className="table-responsive cart_info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
                         <table className="table table-condensed" >
@@ -60,7 +60,7 @@ function CartItem(props) {
                                         <td className="cart_description">
                                             <h4><a style={{marginLeft:'20px'}} href>{item.info.name}</a></h4>
                                         </td>
-                                        <td className="cart_price">
+                                        <td className="cart_price" style={{color:"rgb(254, 152, 15)", fontWeight:"700",fontSize:"20px"}}>
                                             {item.info.price}$
                                         </td>
                                         
@@ -72,10 +72,12 @@ function CartItem(props) {
                                             </div>
                                         </td>
                                         <td className="cart_total">
-                                            <p className="cart_total_price" style={{ color: 'white' }}> {(item.quantity * item.info.price).toFixed(2)}$</p>
+                                            <p className="cart_total_price" style={{color:"rgb(254, 152, 15)", fontWeight:"700",fontSize:"20px"}}> {(item.quantity * item.info.price).toFixed(2)}$</p>
                                         </td>
                                         <td className="cart_delete">
-                                            <button  className="cart_quantity_delete" onClick={handleDelete} >Xóa sản phẩm</button>
+                                            
+                                            <a class="cart_quantity_delete" onClick={handleDelete} style={{align:"right"}} ><i class="fa fa-times"></i></a>
+                                        
                                         </td>
                                     </tr>
                                 

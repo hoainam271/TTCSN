@@ -54,10 +54,13 @@ function SearchComponent() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)} // Lưu giá trị tìm kiếm
             />
-            <button
+            {/* <button
                 style={{ width: "50px", height: "36px", border: "0", borderRadius: "10px", marginLeft: "20px" }}
                 onClick={handleSearch} // Gọi hàm handleSearch khi bấm vào nút
             >
+                Tìm
+            </button> */}
+            <button style={{ width: "50px", height: "30px", border: "0", borderRadius: "10px", marginLeft: "20px", padding: "0" }} onClick={handleSearch} type="button" class="btn btn-fefault cart">
                 Tìm
             </button>
             <div className="product">
@@ -70,8 +73,10 @@ function SearchComponent() {
                             <h3 className="product__title">{product.name}</h3>
                             <div className="product__price">Giá: {product.price}$</div>
                             <div className="product__button">
-                                <button onClick={() => handleAddToCard(product)}>
-                                    <i className="fa fa-shopping-cart"></i> Thêm vào giỏ hàng
+                                <button style={{
+                                }} onClick={() => handleAddToCard(product)} type="button" class="btn btn-fefault cart">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Thêm vào giỏ hàng
                                 </button>
                             </div>
                         </div>

@@ -66,8 +66,8 @@ function LayoutDefault() {
                             <div className="col-sm-6">
                                 <div className="contactinfo">
                                     <ul className="nav nav-pills">
-                                        <li><a href="#"><i className="fa fa-phone"></i> +84 973 402 957</a></li>
-                                        <li><a href="#"><i className="fa fa-envelope"></i> hoainam0660@gmail.com</a></li>
+                                        <li><a ><i className="fa fa-phone"></i> +84 973 402 957</a></li>
+                                        <li><a ><i className="fa fa-envelope"></i> hoainam0660@gmail.com</a></li>
                                     </ul>
                                 </div>
                             </div>

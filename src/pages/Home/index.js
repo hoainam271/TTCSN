@@ -42,10 +42,10 @@ export function Home() {
 	}, [data]); // Chạy lại khi `data` thay đổi
 
 	const navigate = useNavigate();
-		const handleDetail = (id) => {
-			navigate(`/products/${id}`); // Chuyển sang trang chi tiết với ID
-			window.scrollTo(0, 0); // Cuộn lên đầu trang
-		};
+	const handleDetail = (id) => {
+		navigate(`/products/${id}`); // Chuyển sang trang chi tiết với ID
+		window.scrollTo(0, 0); // Cuộn lên đầu trang
+	};
 	return (
 		<>
 			<section id="slider">
@@ -180,9 +180,15 @@ export function Home() {
 													<div className="product1" key={item.id}>
 														<img className="product__image1" src={item.image_url} alt={item.name} />
 														<h2 className="product__price1">Giá: {item.price}$</h2>
-														<p className="product__title1" style={{cursor:"pointer"}} onClick={() => handleDetail(item.id)}>{item.name}</p>
-														<button onClick={() => handleAddToCard(item)}>
+														<p className="product__title1" style={{ cursor: "pointer" }} onClick={() => handleDetail(item.id)}>{item.name}</p>
+														{/* <button onClick={() => handleAddToCard(item)}>
 															<i className="fa fa-shopping-cart button-1" /> Thêm vào giỏ hàng
+														</button> */}
+														<button style={{
+
+														}} onClick={() => handleAddToCard(item)} type="button" class="btn btn-fefault cart">
+															<i class="fa fa-shopping-cart"></i>
+															Thêm vào giỏ hàng
 														</button>
 													</div>
 												))}
@@ -206,9 +212,14 @@ export function Home() {
 																<div className="product2" key={item.id}>
 																	<img className="product__image2" src={item.image_url} alt={item.name} />
 																	<h2 className="product__price2">Giá: {item.price}$</h2>
-																	<p className="product__title2" style={{cursor:"pointer"}} onClick={() => handleDetail(item.id)}>{item.name}</p>
-																	<button onClick={() => handleAddToCard(item)}><i className="fa fa-shopping-cart" />  Thêm vào giỏ hàng</button>
+																	<p className="product__title2" style={{ cursor: "pointer" }} onClick={() => handleDetail(item.id)}>{item.name}</p>
+																	{/* <button onClick={() => handleAddToCard(item)}><i className="fa fa-shopping-cart" />  Thêm vào giỏ hàng</button> */}
+																	<button style={{
 
+																	}} onClick={() => handleAddToCard(item)} type="button" class="btn btn-fefault cart">
+																		<i class="fa fa-shopping-cart"></i>
+																		Thêm vào giỏ hàng
+																	</button>
 																</div>
 
 															</div>
@@ -227,9 +238,13 @@ export function Home() {
 																<div className="product2" key={item.id}>
 																	<img className="product__image2" src={item.image_url} alt={item.name} />
 																	<h2 className="product__price2">Giá: {item.price}$</h2>
-																	<p className="product__title2"  style={{cursor:"pointer"}} onClick={() => handleDetail(item.id)}>{item.name}</p>
-																	<button onClick={() => handleAddToCard(item)}><i className="fa fa-shopping-cart" />  Thêm vào giỏ hàng</button>
+																	<p className="product__title2" style={{ cursor: "pointer" }} onClick={() => handleDetail(item.id)}>{item.name}</p>
+																	<button style={{
 
+																	}} onClick={() => handleAddToCard(item)} type="button" class="btn btn-fefault cart">
+																		<i class="fa fa-shopping-cart"></i>
+																		Thêm vào giỏ hàng
+																	</button>
 																</div>
 
 															</div>
