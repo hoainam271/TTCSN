@@ -26,8 +26,8 @@ function ProductList(props) {
                 {data.map(item => (
                     <div className="product__item" key={item.id}> 
                         <img className="product__img" src={item.image_url} alt={item.description} />
-                        <h4 className="product__title">Tên: {item.name}</h4>
-                        <p className="product__price">Giá: {item.price}$</p>
+                        <h4 style={{marginTop:"20px"}} className="product__title">Tên: {item.name}</h4>
+                        <p style={{marginBottom:"20px"}} className="product__price">Giá: {item.price}$</p>
                         <EditProduct item={item} onReload={handleReload}/>
                         <DeleteProduct item={item} onReload={handleReload}/>
                     </div>

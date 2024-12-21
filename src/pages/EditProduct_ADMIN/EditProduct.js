@@ -72,7 +72,7 @@ function EditProduct(props) {
 
     return (
         <>
-            <button onClick={openModal}>Chỉnh sửa</button>
+            <button style={{ backgroundColor: "rgb(254, 152, 15)",padding:"8px", borderRadius:"5px", border:"2px",textTransform: "uppercase",fontWeight:"700",color:"#331900",marginLeft:"20px", marginRight:"60px" }} onClick={openModal}>Chỉnh sửa</button>
 
             <Modal
                 isOpen={showModal}
@@ -87,6 +87,12 @@ function EditProduct(props) {
                                 <td>Tên sản phẩm</td>
                                 <td>
                                     <input value={data.name} type='text' onChange={handleChange} required name='name' style={{ border: "1px solid #000000", padding: "3px", width: "100%" }} />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hãng</td>
+                                <td>
+                                    <input value={data.brand} type='text' onChange={handleChange} required name='brand' style={{ border: "1px solid #000000", padding: "3px", width: "100%" }} />
                                 </td>
                             </tr>
                             {dataCategory.length > 0 && (
@@ -122,7 +128,7 @@ function EditProduct(props) {
                             </tr>
                             <tr>
                                 <td>
-                                    <button onClick={closeModal}>
+                                    <button  onClick={closeModal}>
                                         Hủy
                                     </button>
                                 </td>

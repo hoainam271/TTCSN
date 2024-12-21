@@ -36,7 +36,7 @@ function DeleteProduct(props) {
     }
     return (
         <>
-            <button onClick={handleDelete}>Delete</button>
+            <button style={{ backgroundColor: "rgb(254, 152, 15)",padding:"8px", borderRadius:"5px", border:"2px",textTransform: "uppercase",fontWeight:"700",color:"#331900" }} onClick={handleDelete}>Delete</button>
         </>
     )
 }

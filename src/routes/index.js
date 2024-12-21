@@ -17,6 +17,7 @@ import PhuTungGam from "../pages/PhuTungGam";
 import PhuTungKhac from "../pages/PhuTungKhac";
 import { patch } from "../utils/request";
 import SearchComponent from "../pages/Search";
+import ProductDetail from "../pages/Product_USER/ProductDetail";
 
 export const routes= [
     {
@@ -74,6 +75,10 @@ export const routes= [
             },{
                 path:"search",
                 element:<SearchComponent />
+            },{
+                path:"products/:id",
+                element:<ProductDetail />
+
             }
         ]
     }

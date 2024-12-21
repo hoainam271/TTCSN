@@ -12,7 +12,7 @@ function EditProduct() {
     
     return(
         <>
-            <h2>Danh sach san pham</h2>
+            <h2>DANH SÁCH SẢN PHẨM</h2>
             <CreateProduct onReload={handleReload}/>
             <ProductList reload={reload}/>
         </>

@@ -53,22 +53,23 @@ function CreateProduct(props) {
         // console.log(data);
         const result = await createProduct(data)
         if (result) {
-                setShowModal(false);
-                onReload(); // Tải lại danh sách sản phẩm
-                Swal.fire({
-                    position: "center",
-                    icon: "success",
-                    title: "Tạo mới sản phẩm thành công",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-            }
+            setShowModal(false);
+            onReload(); // Tải lại danh sách sản phẩm
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Tạo mới sản phẩm thành công",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        }
 
     };
 
     return (
         <>
-            <button onClick={openModal}>Tạo sản phẩm mới</button>
+            <button style={{ backgroundColor: "rgb(254, 152, 15)",padding:"8px", borderRadius:"5px", border:"2px",textTransform: "uppercase",fontWeight:"700",color:"#331900",marginBottom:"20px",marginTop:"20px" }}
+                onClick={openModal}>Tạo sản phẩm mới</button>
 
             <Modal
                 isOpen={showModal}
@@ -83,6 +84,12 @@ function CreateProduct(props) {
                                 <td>Tên sản phẩm</td>
                                 <td>
                                     <input type='text' onChange={handleChange} required name='name' style={{ border: "1px solid #000000", padding: "3px", width: "100%" }} />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Hãng</td>
+                                <td>
+                                    <input type='text' onChange={handleChange} required name='brand' style={{ border: "1px solid #000000", padding: "3px", width: "100%" }} />
                                 </td>
                             </tr>
                             {dataCategory.length > 0 && (
